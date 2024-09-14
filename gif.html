@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screenshots with GIF Overlay</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery {
+            position: relative; /* Make the container relative to position the overlay */
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .gif-overlay {
+            position: absolute; /* Position the GIF absolutely within the container */
+            top: 405px; /* Adjust as needed */
+            left: 185px; /* Adjust as needed */
+            width: 350px !important; /* Adjust as needed */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 10; /* Ensure the GIF is on top of the images */
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="screenshot1.png" alt="Screenshot 1">
+        <img src="screenshot2.png" alt="Screenshot 2">
+        <img src="overlay.gif" class="gif-overlay" alt="Overlay GIF">
+    </div>
+</body>
+</html>
